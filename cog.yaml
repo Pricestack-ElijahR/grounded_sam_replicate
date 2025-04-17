@@ -18,5 +18,8 @@ build:
     - "opencv-python==4.7.0.72"
     - "addict==2.4.0"
     - "yapf==0.40.0"
+    - "numpy<2.0"  # Added to ensure compatibility with torch and opencv-python
+  run:
+    - pip install --upgrade pip  # Update pip to avoid dependency resolution issues
 
 predict: "predict.py:Predictor"
